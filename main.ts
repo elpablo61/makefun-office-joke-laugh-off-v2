@@ -9,5 +9,6 @@ const LINE =
   "Pak Agus is one minute late to our 9:30 standup every day and says 'Sorry, traffic.' He lives across the street.";
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? "/output";
+const outFile = join(outDir, "entry.txt");
 mkdirSync(outDir, { recursive: true });
-writeFileSync(join(outDir, "entry.txt"), LINE, "utf8");
+writeFileSync(outFile, LINE, "utf8");
